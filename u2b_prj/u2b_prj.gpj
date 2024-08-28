@@ -1,0 +1,6 @@
+#!gbuild
+[Subproject]
+app\app.gpj
+bsp\bsp.gpj
+main\main.gpj
+startup\startup.gpj

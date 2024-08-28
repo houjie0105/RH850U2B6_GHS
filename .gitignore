@@ -1,0 +1,13 @@
+*.o
+*.dbo
+*.d
+*.dep
+*.dla
+*.dnm
+*.map
+*.log
+*.dcusr
+*.~lock
+/output
+/.vscode
+/tools/Mcal/Log

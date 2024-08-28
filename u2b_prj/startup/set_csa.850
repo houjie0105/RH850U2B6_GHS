@@ -1,0 +1,110 @@
+
+------------------------------------------------------------------------------
+--	set Configuration Setting Area (Option Bytes, Reset Vector)
+------------------------------------------------------------------------------
+------------------------------------------------------------------------------
+--	this Configuration is Only suitable for U2B6 !!!
+------------------------------------------------------------------------------
+	.section "CSA_SECTION", const
+	.align	4
+	.dw	0x00000000			-- Reset Vector (PE0)         Reset : 0x00000000
+	.dw	0x00000000			-- Reset Vector (PE1)         Reset : 0x00000000 
+	.dw	0x00000000			-- Reset Vector (PE2)         Reset : 0x00000000
+	.dw	0x00000000			-- Reset Vector (PE3)         Reset : 0x00000000
+	.dw	0x00000000			-- Reset Vector (PE4)         Reset : 0x00000000
+	.dw	0x00000000			-- Reset Vector (PE5)         Reset : 0x00000000
+	.dw	0x00000000			-- Reset Vector (PE6)         Reset : 0x00000000
+	.dw	0x00000000			-- Reset Vector (PE7)         Reset : 0x00000000
+	.dw	0x3FF30010			-- Option byte  0 (OPBT0)     Reset : 0x3FE30010
+	.dw	0x007B0000			-- Option byte  1 (OPBT1)     Reset : 0x007B0000
+	.dw	0xFFFFFFFF			-- Option byte  2 (OPBT2)     Reset : 0xFFFFFFFF
+	.dw	0xF9FB7EFC			-- Option byte  3 (OPBT3)     Reset : 0xF9FB7EFE  Changed
+	.dw	0x0C0C0C0B			-- Option byte  4 (OPBT4)     Reset : 0x0C0C0C0B
+	.dw	0xFFFFFFFF			-- Reserved                   Reset : 0xFFFFFFFF
+	.dw	0xFFFF3FCF			-- Option byte  6 (OPBT6)     Reset : 0xFFFF3FCF
+	.dw	0xFFFFFFFF			-- Option byte  7 (OPBT7)     Reset : 0xFFFFFFFF
+	.dw	0xE04FF3F7			-- Option byte  8 (OPBT8)     Reset : 0xE04FFFFF  Changed
+	.dw	0xFFFC077F			-- Option byte  9 (OPBT9)     Reset : 0xFFFC077F
+	.dw	0xF9FD288E			-- Option byte 10 (OPBT10)    Reset : 0xF9FD288E
+	.dw	0xEFFFFFFF			-- Option byte 11 (OPBT11)    Reset : 0xEFFFFFFF
+	.dw	0xFFFFFFFD			-- Option byte 12 (OPBT12)    Reset : 0xFFFFFFFD
+	.dw	0xFFFFFFFF			-- Option byte 13 (OPBT13)    Reset : 0xFFFFFFFF
+	.dw	0xFF7F8004			-- Option byte 14 (OPBT14)    Reset : 0xFF7F8004
+	.dw	0xFF7F0004			-- Option byte 15 (OPBT15)    Reset : 0xFF7F0004
+	.dw	0x74FFFF10			-- Option byte 16 (OPBT16)    Reset : 0x74FFFF10
+	.dw	0xF9AAFCFC			-- Option byte 17 (OPBT17)    Reset : 0xF9AAFCFC
+	.dw	0xC26BC1CE			-- Option byte 18 (OPBT18)    Reset : 0xC26BC1CE
+	.dw	0xFFFFC203			-- Option byte 19 (OPBT19)    Reset : 0xFFFFC203
+	.dw	0xCB88FFEF			-- Option byte 20 (OPBT20)    Reset : 0xCB88FFEF
+	.dw	0x065503CF			-- Option byte 21 (OPBT21)    Reset : 0x065503CF
+	.dw	0xFD94FE31			-- Option byte 22 (OPBT22)    Reset : 0xFD94FE31
+	.dw	0xFFFFFDFC			-- Option byte 23 (OPBT23)    Reset : 0xFFFFFDFC
+	.dw	0xFFFFFFFC			-- Option byte 24 (OPBT24)    Reset : 0xFFFFFFFC
+	.dw	0xFFC0F3FF			-- Option byte 25 (OPBT25)    Reset : 0xFFC0F3FF
+	.dw	0xFFFF0010			-- Option byte 26 (OPBT26)    Reset : 0xFFFF0010
+	.dw	0xFFFF0000			-- Option byte 27 (OPBT27)    Reset : 0xFFFF0000
+	.dw	0xFFFFFFFF			-- Option byte 28 (OPBT28)    Reset : 0xFFFFFFFF
+	.dw	0xFFFFFFFF			-- Reserved                   Reset : 0xFFFFFFFF
+	.dw	0xFFFFFFFF			-- Reserved                   Reset : 0xFFFFFFFF
+	.dw	0xFFFFFFFF			-- Reserved                   Reset : 0xFFFFFFFF
+	.dw	0xFFFFFFFF			-- Reserved                   Reset : 0xFFFFFFFF
+	.dw	0xFFFFFFFF			-- Reserved                   Reset : 0xFFFFFFFF
+	.dw	0xFFFFFFFF			-- Reserved                   Reset : 0xFFFFFFFF
+	.dw	0xFFFFFFFF			-- Reserved                   Reset : 0xFFFFFFFF
+	.dw	0xF984C8FF			-- Option byte 36 (OPBT36)    Reset : 0xF984C8FF
+	.dw	0x02EFFFFF			-- Option byte 37 (OPBT37)    Reset : 0x02EFFFFF
+	.dw	0x00000000			-- Option byte 38 (OPBT38)    Reset : 0x00000000
+	.dw	0x00000000			-- Option byte 39 (OPBT39)    Reset : 0x00000000
+	.dw	0xFF00FCFF			-- Option byte 40 (OPBT40)    Reset : 0xFF00FCFF
+	.dw	0xFFFFFFFF			-- Reserved                   Reset : 0xFFFFFFFF
+	.dw	0xFFFFFFFF			-- Reserved                   Reset : 0xFFFFFFFF
+	.dw	0xFFFFFFFF			-- Reserved                   Reset : 0xFFFFFFFF
+	.dw	0xFFFFFFFF			-- Reserved                   Reset : 0xFFFFFFFF
+	.dw	0xFFFFFFFF			-- Reserved                   Reset : 0xFFFFFFFF
+	.dw	0xFFFFFFFF			-- Reserved                   Reset : 0xFFFFFFFF
+	.dw	0xFFFFFFFF			-- Reserved                   Reset : 0xFFFFFFFF
+	.dw	0xFFFFFFFF			-- Reserved                   Reset : 0xFFFFFFFF
+	.dw	0xFFFFFFFF			-- Reserved                   Reset : 0xFFFFFFFF
+	.dw	0xFFFFFFFF			-- Reserved                   Reset : 0xFFFFFFFF
+	.dw	0xFFFFFFFF			-- Reserved                   Reset : 0xFFFFFFFF
+	.dw	0xFFFFFFFF			-- Reserved                   Reset : 0xFFFFFFFF
+	.dw	0xFFFFFFFF			-- Reserved                   Reset : 0xFFFFFFFF
+	.dw	0xFFFFFFFF			-- Reserved                   Reset : 0xFFFFFFFF
+	.dw	0xFFFFFFFF			-- Reserved                   Reset : 0xFFFFFFFF
+
+
+------------------------------------------------------------------------------
+--	set Security Setting Area (Security Option Bytes, Reset Vector)
+------------------------------------------------------------------------------
+	.section "SACON_SECTION", const
+	.align	4
+  .dw	0x0FFFFFFF			-- ICUM_OPBT0				  	Shipping : 0xFFFFFFFF
+  .dw	0x00580000			-- ICUM_OPBT1         			Shipping : 0xFFFFFFFF
+  .dw	0x00580000			-- ICUM_OPBT2        			Shipping : 0xFFFFFFFF
+  .dw	0xFF300000			-- ICUM_OPBT3         			Shipping : 0xFFFFFFFF
+  .dw	0xFFFFFFCF			-- ICUM_OPBT4         			Shipping : 0xFFFFFFFF
+  .dw	0x005FFFFF			-- ICUM_OPBT5         			Shipping : 0xFFFFFFFF
+  .dw	0x00980000			-- ICUM_OPBT6         			Shipping : 0xFFFFFFFF
+  .dw	0x009FFFFF			-- ICUM_OPBT7         			Shipping : 0xFFFFFFFF
+
+  .section "OCDID_SECTION", const
+  .align	4
+  .dw	0xFFFFFFFF			-- OCDID_0				  	    Shipping : 0xFFFFFFFF
+  .dw	0xFFFFFFFF			-- OCDID_1	         			Shipping : 0xFFFFFFFF
+  .dw	0xFFFFFFFF			-- OCDID_2	        			Shipping : 0xFFFFFFFF
+  .dw	0xFFFFFFFF			-- OCDID_3	         			Shipping : 0xFFFFFFFF
+  .dw	0xFFFFFFFF			-- OCDID_4	         			Shipping : 0xFFFFFFFF
+  .dw	0xFFFFFFFF			-- OCDID_5	         			Shipping : 0xFFFFFFFF
+  .dw	0xFFFFFFFF			-- OCDID_6	         			Shipping : 0xFFFFFFFF
+  .dw	0xFFFFFFFF			-- OCDID_7	         			Shipping : 0xFFFFFFFF
+
+  .section "SPID_SECTION", const
+  .align	4
+  .dw	0xFFFFFFFF			-- SPID_0				  	    Shipping : 0xFFFFFFFF
+  .dw	0xFFFFFFFF			-- SPID_1	         			Shipping : 0xFFFFFFFF
+  .dw	0xFFFFFFFF			-- SPID_2	        			Shipping : 0xFFFFFFFF
+  .dw	0xFFFFFFFF			-- SPID_3	         			Shipping : 0xFFFFFFFF
+  .dw	0xFFFFFFFF			-- SPID_4	         			Shipping : 0xFFFFFFFF
+  .dw	0xFFFFFFFF			-- SPID_5	         			Shipping : 0xFFFFFFFF
+  .dw	0xFFFFFFFF			-- SPID_6	         			Shipping : 0xFFFFFFFF
+  .dw	0xFFFFFFFF			-- SPID_7	         			Shipping : 0xFFFFFFFF

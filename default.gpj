@@ -1,0 +1,6 @@
+#!gbuild
+defineConfig(Debug   dbg debug.gpc)
+defineConfig(Release rel release.gpc)
+primaryTarget=v800_standalone.tgt
+[Project]
+ghs_u2b6_mcal.gpj	[Program]

@@ -1,0 +1,13 @@
+#!gbuild
+[Program]
+	{optgroup=GhsCommonOptions} -o ./output/ghs_u2b6_mcal.elf
+	-object_dir=./output/objs
+	-ghsmc_file=./ghs_u2b6_mcal.ghsmc
+	-I.\
+	-I.\u2b_prj
+	-I.\u2b_prj\app
+	-I.\u2b_prj\bsp
+	-I.\u2b_prj\main
+	-I.\u2b_prj\startup
+	-I.\u2b_prj\bsp\driver
+u2b_prj\u2b_prj.gpj

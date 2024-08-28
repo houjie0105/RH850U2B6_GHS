@@ -1,0 +1,15 @@
+#!gbuild
+[Build Configuration]
+	-bsp generic
+	-cpu=rh850g4mh
+	-no_misalign_pack
+	-overlap
+	-G
+	-e _RESET
+	-prepare_dispose
+	-inline_prologue
+	-sda=all
+	-large_sda
+	-dual_debug
+	--diag_suppress 1,47
+	-D__DEBUG

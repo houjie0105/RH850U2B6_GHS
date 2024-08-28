@@ -1,0 +1,8 @@
+version = 1
+title = "ghs_u2b6_mcal"
+
+core {
+	0 { download = {"./output/ghs_u2b6_mcal.elf"} }
+	1 { symbol = {"./output/ghs_u2b6_mcal.elf"} }
+	2 { symbol = {"./output/ghs_u2b6_mcal.elf"} }
+}
