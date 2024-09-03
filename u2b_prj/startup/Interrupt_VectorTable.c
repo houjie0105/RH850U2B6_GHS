@@ -54,6 +54,7 @@
 /*                         ISR Definition                                    */
 /*****************************************************************************/
 extern void Ostm_O0_100ms_Handler(void);
+extern void Ostm_O1_100ms_Handler(void);
 extern void CAN_ReceiveFIFO_Interrupt(void);
 extern void CAN_ReceiveTRFIFO0_Interrupt(void);
 extern void CAN_ReceiveTRFIFO1_Interrupt(void);
@@ -61,6 +62,7 @@ extern void CAN_ReceiveTRFIFO2_Interrupt(void);
 extern void CAN_ReceiveTRFIFO5_Interrupt(void);
 
 #define INT_VECTOR_360 Ostm_O0_100ms_Handler
+#define INT_VECTOR_361 Ostm_O1_100ms_Handler
 #define INT_VECTOR_653 CAN_ReceiveFIFO_Interrupt
 #define INT_VECTOR_659 CAN_ReceiveTRFIFO0_Interrupt
 #define INT_VECTOR_665 CAN_ReceiveTRFIFO1_Interrupt

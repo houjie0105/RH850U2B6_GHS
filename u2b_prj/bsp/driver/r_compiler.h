@@ -136,9 +136,6 @@ unsigned int __STSR(int regID, int selID);
 /*****************************************************************************
  Typedef definitions
  *****************************************************************************/
-#ifdef USE_EXT_DATATYPE
-#include "Platform_Types.h"            /* platform specific type definitions */
-#else
 /*
  * integer data types
  */
@@ -160,7 +157,6 @@ typedef signed long         sint8_least;    /* At least 7 bit + 1 bit sign   */
 typedef signed long         sint16_least;   /* At least 15 bit + 1 bit sign  */
 typedef signed long         sint32_least;   /* At least 31 bit + 1 bit sign  */
 typedef unsigned char       boolean;        /* for use with TRUE/FALSE       */
-#endif
 
 /*****************************************************************************
  Global variables

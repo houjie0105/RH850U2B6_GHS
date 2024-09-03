@@ -36,11 +36,12 @@
 #include "r_intc.h"
 #include "r_br.h"
 #include "r_rscfd.h"
+#include "r_i2c.h"
 
 /*****************************************************************************
  Macro definitions
  *****************************************************************************/
-#define CAN_TEST
+//#define CAN_TEST
 
 /*****************************************************************************
  Typedef definitions
@@ -374,6 +375,25 @@ void Main_Init(void)
         R_OSTM_InitCtl(0U, OSTM_IE);
         R_OSTM_SetCmp(0U, 7999999UL);
         R_OSTM_Start(0U);
+
+
+        R_I2C_Init();
+        {
+            static uint8 Lu1TxBuff[4] = {0};
+            static uint8 Lu1RxBuff[4] = {0};
+            uint16 Lu1I2CRet = E_OK;
+            uint8 Lu1I2CSt = I2C_ST_IDLE;
+            uint32 Lu4I2CTimout = 0xFFFF;
+            Lu1TxBuff[0] = 0x60;
+            Lu1I2CRet = R_I2C_WriteRead(0x18,Lu1TxBuff,1,Lu1RxBuff,1);
+            do
+            {
+                Lu1I2CSt = R_I2C_GetDevStatus();
+                Lu4I2CTimout --;
+            }while((Lu1I2CSt==I2C_ST_BUSY)&&Lu4I2CTimout);
+
+        }
+
         Gu1PerInitFinished = 0UL;
     }
     else  if (PE_CPU1 == (Lu4Peid & 0x1FUL))

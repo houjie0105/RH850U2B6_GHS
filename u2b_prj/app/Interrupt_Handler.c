@@ -29,6 +29,7 @@
  *****************************************************************************/
 #include "r_compiler.h"
 #include "r_rscfd.h"
+#include "r_i2c.h"
 
 /*****************************************************************************
  Macro definitions
@@ -209,6 +210,10 @@ __interrupt void Ostm_O0_100ms_Handler(void)
     Gu4Task_100MsFlag = 1;
 }
 
+__interrupt void Ostm_O1_100ms_Handler(void)
+{
+    R_I2C_MainFunction();
+}
 
 void CanIf_TxRxIndication(const Can_HwType *Mailbox, const PduInfoType *PduInfoPtr)
 {

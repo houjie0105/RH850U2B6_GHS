@@ -7,6 +7,8 @@ r_clk.c
 r_clk.h
 r_clk_reg.h
 r_compiler.h
+r_i2c.c
+r_i2c.h
 r_intc.c
 r_intc.h
 r_intc_reg.h
